@@ -1,11 +1,7 @@
 "use strict";
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -27,7 +23,7 @@ const fs = __importStar(require("fs"));
 const fix_path = process.argv[2] ?? (() => { throw new Error("フォルダを node fix_size.js rounded/fixed のような形で指定して実行してください。"); })();
 const files = fs.readdirSync(`${fix_path}/`);
 files.forEach(function (file, _index) {
-    if (file.slice(-4) !== ".svg")
+    if (file.endsWith(".svg"))
         return;
     if (file.length > 6 && !file.startsWith("U+")) {
         console.log(`Removing ${file}: file name too long`);

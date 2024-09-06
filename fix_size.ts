@@ -2,7 +2,7 @@ import * as fs from 'fs';
 const fix_path = process.argv[2] ?? (() => { throw new Error("フォルダを node fix_size.js rounded/fixed のような形で指定して実行してください。") })();
 const files = fs.readdirSync(`${fix_path}/`);
 files.forEach(function (file, _index) {
-    if (file.slice(-4) !== ".svg") return;
+    if (file.endsWith(".svg")) return;
     if (file.length > 6 && !file.startsWith("U+")) {
       console.log(`Removing ${file}: file name too long`);
       fs.unlinkSync(`${fix_path}/${file}`);

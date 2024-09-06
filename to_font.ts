@@ -25,7 +25,7 @@ if (!fs.existsSync(out_path)) {
 generateFonts({
   inputDir: `${fix_path}/`,
   outputDir: `${out_path}/`,
-  name: `linzklar_${style_name}`,
+  name: `${style_name}`,
   fontTypes: [FontAssetType.TTF, FontAssetType.WOFF],
   assetTypes: [
     OtherAssetType.CSS,
@@ -38,22 +38,22 @@ generateFonts({
 }).then(results => {
   console.log(results);
   
-  fs.readFile(`${out_path}/linzklar_${style_name}.html`, 'utf8', function (err,data) {
+  fs.readFile(`${out_path}/${style_name}.html`, 'utf8', function (err,data) {
     if (err) {
       return console.log(err);
     }
     const result = replace_problematic_css(data);
-    fs.writeFile(`${out_path}/linzklar_${style_name}.html`, result, 'utf8', function (err) {
+    fs.writeFile(`${out_path}/${style_name}.html`, result, 'utf8', function (err) {
        if (err) return console.log(err);
     });
   });
 
-  fs.readFile(`${out_path}/linzklar_${style_name}.css`, 'utf8', function (err,data) {
+  fs.readFile(`${out_path}/${style_name}.css`, 'utf8', function (err,data) {
     if (err) {
       return console.log(err);
     }
     const result = replace_problematic_css(data);
-    fs.writeFile(`${out_path}/linzklar_${style_name}.css`, result, 'utf8', function (err) {
+    fs.writeFile(`${out_path}/${style_name}.css`, result, 'utf8', function (err) {
        if (err) return console.log(err);
     });
   });

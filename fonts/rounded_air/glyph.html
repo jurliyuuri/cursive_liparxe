@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fonts</title>
+    <style>
+        @font-face {
+            font-family: 'x-rounded_air';
+            src: url(./rounded_air.woff);
+        }
+        :lang(x-rounded_air) {
+            font-family: 'x-rounded_air';
+        }
+    </style>
+</head>
+<body>
+    <details style="margin: 30px auto;" open>
+        <summary style="font-family: 'Yu Gothic UI';"><b>書体見本</b></summary>
+        <p lang="x-rounded_air"><span style="font-size: 12px;">kissige t^enuaine sautasvia iwa jatukijanu utukasvia. iwa, amuamo taupwonu moho t^enuaim ata acau liwopam.</span></p>
+        <p lang="x-rounded_air"><span style="font-size: 16px;">kissige t^enuaine sautasvia iwa jatukijanu utukasvia. iwa, amuamo taupwonu moho t^enuaim ata acau liwopam.</span></p>
+        <p lang="x-rounded_air"><span style="font-size: 20px;">kissige t^enuaine sautasvia iwa jatukijanu utukasvia. iwa, amuamo taupwonu moho t^enuaim ata acau liwopam.</span></p>
+        <p lang="x-rounded_air"><span style="font-size: 28px;">kissige t^enuaine sautasvia iwa jatukijanu utukasvia. iwa, amuamo taupwonu moho t^enuaim ata acau liwopam.</span></p>
+        <p lang="x-rounded_air"><span style="font-size: 32px;">kissige t^enuaine sautasvia iwa jatukijanu utukasvia. iwa, amuamo taupwonu moho t^enuaim ata acau liwopam.</span></p>
+        <p lang="x-rounded_air"><span style="font-size: 40px;">kissige t^enuaine sautasvia iwa jatukijanu utukasvia. iwa, amuamo taupwonu moho t^enuaim ata acau liwopam.</span></p>
+        <p lang="x-rounded_air"><span style="font-size: 48px;">kissige t^enuaine sautasvia iwa jatukijanu utukasvia. iwa, amuamo taupwonu moho t^enuaim ata acau liwopam.</span></p>
+    </details>
+    <div>
+        <div>
+            <label for="input">webフォントで好きな文章を試すことができます</label>
+            <input id="input" type="text" placeholder="LUCUCLETI E PANKA PI AUC E PANKA" maxlength="50" style="font-size: 32px; width: 80%;" >
+        </div>
+        <div>
+            <p id="output" lang="x-rounded_air" style="font-size: 32px; min-height: 1em;">LUCUCLETI E PANKA PI AUC E PANKA</p>
+        </div>
+        <script>
+            const input = document.getElementById("input");
+            const output = document.getElementById("output"); 
+            input.addEventListener("input", (e) => output.innerHTML = input.value);
+        </script>
+    </div>
+</body>
+</html>
