@@ -1,13 +1,13 @@
-# linmarn_font_project
-燐字のフォント作成用のファイルセット。
+# cursive_liparxe
+筆記体リパーシェフォント作成用のファイルセット。
 
 "fileset" フォルダにリネーム済みの空のsvgが置かれている。
 
 ## ビルド成果物
 
-`fonts/` 以下に html, css, ttf, woff, json の 5 ファイルが作成されている。
+`fonts/` 以下に sfd, ttf, woff の 5 ファイルが作成されている。
 
-2023 年 5 月 6 日現在、このリポジトリから提供できているのは rounded【骨軸倉字】および herm_giaru【美門倉官字】の 2 種。
+2024 年 9 月 8 日現在、このリポジトリから提供できているのは rounded_air【冠骨軸倉字】および cursive_liparxe の 2 種。
 
 ## フォント一覧
 
