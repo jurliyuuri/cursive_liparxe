@@ -13,33 +13,24 @@
 
 命名の経緯については [AIL-MO-LETI-CEP/issues/issues/128](https://github.com/AIL-MO-LETI-CEP/issues/issues/128) のログも参照のこと。
 
-### rounded【骨軸倉字】
+### rounded_air【冠骨軸倉字】
 
 - [x] グリフ充実
 - [x] フォントファイル作成
 
+丸ゴシック。等幅アイレン・リパーシェと半角燐数字を備える。`fh`, `vh` はそれぞれ `v'`, `f'` で入力すること。
 
-丸ゴシック。等幅ペメセペ・ルヨットと半角燐数字を備える。
-- [定義済グリフ一覧](https://yasusho.github.io/linmarn_font_project/fonts/rounded/linzklar_rounded.html)
-- woffファイルパス: `https://yasusho.github.io/linmarn_font_project/fonts/rounded/linzklar_rounded.woff`
+- [試し打ちページ](https://jurliyuuri.com/cursive_liparxe/fonts/rounded_air/glyph.html)
+- woffファイルパス: `https://jurliyuuri.com/cursive_liparxe/fonts/rounded_air/rounded_air.woff`
 
-### kakugo【硬骨軸倉字】
+### cursive_liparxe
 
-- [ ] グリフ充実
-- [ ] フォントファイル作成
-
-角ゴシック。燐字については、後述の「角ゴ化作業」で対処する。等幅ペメセペ・ルヨットと半角燐数字についてはこの方法が効かないため、手作業で作り直す必要が出てくるが、できていない。したがってフォントファイルもまだ作っていない。
-
-### herm_giaru【美門倉官字】
-
-- [ ] グリフ充実
+- [x] グリフ充実
 - [x] フォントファイル作成
 
-楷書フォント。[84字燐字紹介PDF](https://github.com/yasusho/linmarn_table_pdf)に由来する。よってまだ 84 字しかない。
-- [定義済グリフ一覧](https://yasusho.github.io/linmarn_font_project/fonts/herm_giaru/linzklar_herm_giaru.html)
-- woffファイルパス: `https://yasusho.github.io/linmarn_font_project/fonts/herm_giaru/linzklar_herm_giaru.woff`
-
-<hr>
+筆記体リパーシェ。
+- [試し打ちページ](https://jurliyuuri.com/cursive_liparxe/fonts/cursive_liparxe/glyph.html)
+- woffファイルパス: `https://jurliyuuri.com/cursive_liparxe/fonts/cursive_liparxe/cursive_liparxe.woff`
 
 ## フォントファイル出力
 
@@ -116,3 +107,15 @@ npm uninstall fantasticon && npm install fantasticon
 ```
 
 でもできるらしいです。
+
+### fix_size.js, to_font.js が走らない場合
+実は本コードにはグローバルにインストールされていることが前提のパッケージがいくつかある。
+
+ひとまず以下のコマンドを順に試してみると解決する場合がある（n=1）
+
+```bash
+$ sudo apt install pkg-config
+$ sudo apt install libpixman-1-dev
+$ sudo apt install libcairo2-dev
+$ sudo apt install libpango1.0-dev
+```

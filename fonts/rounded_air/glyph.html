@@ -6,24 +6,31 @@
     <title>fonts</title>
     <style>
         @font-face {
-            font-family: 'x-rounded_air';
+            font-family: 'x-rounded-air';
             src: url(./rounded_air.woff);
         }
-        :lang(x-rounded_air) {
-            font-family: 'x-rounded_air';
+        :lang(x-rounded-air) {
+            font-family: 'x-rounded-air';
+        }
+        @font-face {
+            font-family: 'x-cursive-liparxe';
+            src: url(../../cursive_liparxe/cursive_liparxe.woff);
+        }
+        :lang(x-cursive-liparxe) {
+            font-family: 'x-cursive-liparxe';
         }
     </style>
 </head>
 <body>
     <details style="margin: 30px auto;" open>
         <summary style="font-family: 'Yu Gothic UI';"><b>書体見本</b></summary>
-        <p lang="x-rounded_air"><span style="font-size: 12px;">kissige t^enuaine sautasvia iwa jatukijanu utukasvia. iwa, amuamo taupwonu moho t^enuaim ata acau liwopam.</span></p>
-        <p lang="x-rounded_air"><span style="font-size: 16px;">kissige t^enuaine sautasvia iwa jatukijanu utukasvia. iwa, amuamo taupwonu moho t^enuaim ata acau liwopam.</span></p>
-        <p lang="x-rounded_air"><span style="font-size: 20px;">kissige t^enuaine sautasvia iwa jatukijanu utukasvia. iwa, amuamo taupwonu moho t^enuaim ata acau liwopam.</span></p>
-        <p lang="x-rounded_air"><span style="font-size: 28px;">kissige t^enuaine sautasvia iwa jatukijanu utukasvia. iwa, amuamo taupwonu moho t^enuaim ata acau liwopam.</span></p>
-        <p lang="x-rounded_air"><span style="font-size: 32px;">kissige t^enuaine sautasvia iwa jatukijanu utukasvia. iwa, amuamo taupwonu moho t^enuaim ata acau liwopam.</span></p>
-        <p lang="x-rounded_air"><span style="font-size: 40px;">kissige t^enuaine sautasvia iwa jatukijanu utukasvia. iwa, amuamo taupwonu moho t^enuaim ata acau liwopam.</span></p>
-        <p lang="x-rounded_air"><span style="font-size: 48px;">kissige t^enuaine sautasvia iwa jatukijanu utukasvia. iwa, amuamo taupwonu moho t^enuaim ata acau liwopam.</span></p>
+        <p lang="x-rounded-air"><span style="font-size: 12px;">dipaige k'es'iamo yujo blekhaumo rita tobwuja qexuamo cizeur. tinnaga fas^eu-fas^euma h^ut^eesvia. 1234567890 ,."!?(){}[]</span></p>
+        <p lang="x-rounded-air"><span style="font-size: 16px;">dipaige k'es'iamo yujo blekhaumo rita tobwuja qexuamo cizeur. tinnaga fas^eu-fas^euma h^ut^eesvia. 1234567890 ,."!?(){}[]</span></p>
+        <p lang="x-rounded-air"><span style="font-size: 20px;">dipaige k'es'iamo yujo blekhaumo rita tobwuja qexuamo cizeur. tinnaga fas^eu-fas^euma h^ut^eesvia. 1234567890 ,."!?(){}[]</span></p>
+        <p lang="x-rounded-air"><span style="font-size: 28px;">dipaige k'es'iamo yujo blekhaumo rita tobwuja qexuamo cizeur. tinnaga fas^eu-fas^euma h^ut^eesvia. 1234567890 ,."!?(){}[]</span></p>
+        <p lang="x-rounded-air"><span style="font-size: 32px;">dipaige k'es'iamo yujo blekhaumo rita tobwuja qexuamo cizeur. tinnaga fas^eu-fas^euma h^ut^eesvia. 1234567890 ,."!?(){}[]</span></p>
+        <p lang="x-rounded-air"><span style="font-size: 40px;">dipaige k'es'iamo yujo blekhaumo rita tobwuja qexuamo cizeur. tinnaga fas^eu-fas^euma h^ut^eesvia. 1234567890 ,."!?(){}[]</span></p>
+        <p lang="x-rounded-air"><span style="font-size: 48px;">dipaige k'es'iamo yujo blekhaumo rita tobwuja qexuamo cizeur. tinnaga fas^eu-fas^euma h^ut^eesvia. 1234567890 ,."!?(){}[]</span></p>
     </details>
     <div>
         <div>
@@ -31,12 +38,12 @@
             <input id="input" type="text" placeholder="LUCUCLETI E PANKA PI AUC E PANKA" maxlength="50" style="font-size: 32px; width: 80%;" >
         </div>
         <div>
-            <p id="output" lang="x-rounded_air" style="font-size: 32px; min-height: 1em;">LUCUCLETI E PANKA PI AUC E PANKA</p>
+            <p id="output" lang="x-rounded-air" style="font-size: 32px; min-height: 1em;">LUCUCLETI E PANKA PI AUC E PANKA</p>
         </div>
         <script>
             const input = document.getElementById("input");
             const output = document.getElementById("output"); 
-            input.addEventListener("input", (e) => output.innerHTML = input.value);
+            input.addEventListener("input", (e) => output.innerHTML = `${input.value}<br><b>${input.value}</b><br><i>${input.value}</i>`);
         </script>
     </div>
 </body>
