@@ -32,7 +32,7 @@
 - [試し打ちページ](https://jurliyuuri.com/cursive_liparxe/fonts/cursive_liparxe/glyph.html)
 - woffファイルパス: `https://jurliyuuri.com/cursive_liparxe/fonts/cursive_liparxe/cursive_liparxe.woff`
 
-## フォントファイル出力
+<!-- ## フォントファイル出力
 
 ### 元の SVG データがストロークで書かれているフォントの場合
 
@@ -118,4 +118,4 @@ $ sudo apt install pkg-config
 $ sudo apt install libpixman-1-dev
 $ sudo apt install libcairo2-dev
 $ sudo apt install libpango1.0-dev
-```
+``` -->
